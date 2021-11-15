@@ -1,5 +1,6 @@
-import numpy as np
+# -*- coding: utf-8 -*-
 import cv2  # opencv 사용
+import numpy as np
 
 
 def region_of_interest(img, vertices, color3=(255, 255, 255), color1=255):  # ROI 셋팅
@@ -32,7 +33,7 @@ def mark_img(img, blue_threshold=200, green_threshold=200, red_threshold=200):  
     return mark
 
 
-cap = cv2.VideoCapture('solidWhiteRight.mp4')  # 동영상 불러오기
+cap = cv2.VideoCapture('line.mp4')  # 동영상 불러오기
 
 while(cap.isOpened()):
     ret, image = cap.read()
@@ -57,4 +58,4 @@ while(cap.isOpened()):
         break
 # Release
 cap.release()
-cv2.destroyAllWindows
+cv2.destroyAllWindows()
