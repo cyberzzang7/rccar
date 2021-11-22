@@ -34,7 +34,7 @@ def region_of_interest(image):
     masked_image = cv2.bitwise_and(image, mask)
 
     return masked_image
-cap = cv2.VideoCapture("3.mp4")
+cap = cv2.VideoCapture(0)
 
 while(cap.isOpened()):
     _, frame = cap.read()

@@ -34,7 +34,7 @@ def getLaneCurve(img, display=2):
         imgInvWarp = cv2.cvtColor(imgInvWarp, cv2.COLOR_GRAY2BGR)
         imgInvWarp[0:hT // 3, 0:wT] = 0,0,0
         imgLaneColor = np.zeros_like(img)
-        imgLaneColor[:] = 0, 255, 0
+        imgLaneColor[:] = 0, 255, 
         imgLaneColor = cv2.bitwise_and(imgInvWarp, imgLaneColor)
         imgResult = cv2.addWeighted(imgResult, 1, imgLaneColor, 1,0)
         midY = 450
@@ -75,11 +75,11 @@ def getLaneCurve(img, display=2):
     return curve
 
 if __name__ =='__main__':
-
+    
     intialTrackBarVals =  [126, 37, 47, 85]
     utlis.initializeTrackbars(intialTrackBarVals)
     cap = cv2.VideoCapture('2.mp4')
-    frameCounter = 0
+    frameCounter = 
 
 
     while True:
@@ -91,7 +91,7 @@ if __name__ =='__main__':
         _, img = cap.read()    
         success, img = cap.read()
         img = cv2.resize(img,(480,240))
-        curve = getLaneCurve(img,display=1)
+        curve = getLaneCurve(img)
         print(curve)
         cv2.imshow('Vid',img)
         cv2.waitKey(1)

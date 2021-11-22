@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from numpy.lib.histograms import histogram
+
 
 def thresholding(img):
 
