@@ -10,5 +10,5 @@ def getImg(display = False, size = [480,240]):
 
 if __name__ == '__main__': 
     while True:
-        cap = cv2.VideoCapture('2.mp4')
+        cap = cv2.VideoCapture(0)
         img = getImg(True)
