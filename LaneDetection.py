@@ -79,7 +79,7 @@ if __name__ =='__main__':
     intialTrackBarVals =  [126, 37, 47, 85]
     utlis.initializeTrackbars(intialTrackBarVals)
     cap = cv2.VideoCapture('2.mp4')
-    frameCounter = 
+    frameCounter = 0
 
 
     while True:
